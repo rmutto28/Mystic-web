@@ -1,0 +1,1 @@
+Aqui ficam os assets do jogo, como imagens, sprites e sons.
