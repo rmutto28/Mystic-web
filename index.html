@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mishik RPG</title>
+    <title>Mishik RPG - DIP 2</title>
     <style>
-        body { background: #000; color: #fff; font-family: Arial; text-align: center; margin-top: 50px; }
-        .hud { position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; }
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        #menu, #race-select, #game-screen {
+            display: none;
+            margin-top: 100px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .hud {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <div class="hud">
-        <div>Vida: 100</div>
-        <div>Mana: 50</div>
-        <div>XP: 0</div>
+    <div id="menu">
+        <h1>Mishik RPG</h1>
+        <button onclick="showRaceSelection()">Jogar</button>
     </div>
-    <h1>Bem-vindo ao Mishik RPG</h1>
-    <img src="images/logo-mishik.png" alt="Logo do Mishik RPG" width="300" />
-    <script src="game.js"></script>
+
+    <div id="race-select">
+        <h2>Escolha sua raça</h2>
+        <button onclick="startGame('Humano')">Humano</button>
+        <button onclick="startGame('Elfo')">Elfo</button>
+        <button onclick="startGame('Orc')">Orc</button>
+    </div>
+
+    <div id="game-screen">
+        <div class="hud">
+            <div>Vida: 100</div>
+            <div>Mana: 50</div>
+            <div>XP: 0</div>
+        </div>
+        <h2>Você está jogando como <span id="race-name"></span></h2>
+        <canvas id="gameCanvas" width="600" height="400" style="background:#222;border:1px solid #fff;"></canvas>
+    </div>
+
+    <script src="scripts/game.js"></script>
+    <script>
+        document.getElementById("menu").style.display = "block";
+
+        function showRaceSelection() {
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("race-select").style.display = "block";
+        }
+
+        function startGame(race) {
+            document.getElementById("race-select").style.display = "none";
+            document.getElementById("game-screen").style.display = "block";
+            document.getElementById("race-name").innerText = race;
+            initGame();
+        }
+    </script>
 </body>
 </html>
