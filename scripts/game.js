@@ -22,3 +22,5 @@ function draw() {
     ctx.fillStyle = "#0f0";
     ctx.fillRect(x, y, 30, 30);
 }
+
+window.onload = initGame;
