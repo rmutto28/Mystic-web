@@ -1,0 +1,1 @@
+console.log("Bot backend será adicionado aqui futuramente com integração ao Telegram.");
