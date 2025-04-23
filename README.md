@@ -1,0 +1,3 @@
+# Mystic RPG
+
+Instruções para subir o projeto na Vercel...
