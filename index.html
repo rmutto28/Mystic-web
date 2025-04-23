@@ -1,19 +1,20 @@
-<!-- Versão corrigida com imagem de fundo -->
-
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Mishik RPG</title>
-  <style>
-    body { margin: 0; background: #000; color: white; font-family: sans-serif; text-align: center; }
-    #game { width: 100vw; height: 100vh; background: #000; display: flex; align-items: center; justify-content: center; }
-  </style>
+    <title>Mishik RPG</title>
+    <style>
+        body { background: #000; color: #fff; font-family: Arial; text-align: center; margin-top: 50px; }
+        .hud { position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 5px; }
+    </style>
 </head>
 <body>
-  <h2>Carregando Mishik RPG...</h2>
-  <div id="game">
-    <img src="assets/bg.jpg" alt="Mishik Background" width="720" height="405">
-  </div>
+    <div class="hud">
+        <div>Vida: 100</div>
+        <div>Mana: 50</div>
+        <div>XP: 0</div>
+    </div>
+    <h1>Bem-vindo ao Mishik RPG</h1>
+    <img src="images/logo-mishik.png" alt="Logo do Mishik RPG" width="300" />
+    <script src="game.js"></script>
 </body>
 </html>
