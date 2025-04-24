@@ -1,7 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mishik RPG - Build Ativando Script</title>        body {
+    <title>Mishik RPG - Final</title>
+    <style>
+        body {
             margin: 0;
             padding: 0;
             background: url('images/background.jpg') no-repeat center center fixed;
@@ -46,7 +49,6 @@
     <div id="game-screen">
         <div class="hud">
             <div>Vida: 100</div>
-            <div>Mana: 50</div>
             <div>XP: 0</div>
         </div>
         <h2>Você está jogando como <span id="race-name"></span></h2>
@@ -55,8 +57,6 @@
 
     <script src="scripts/game.js"></script>
     <script>
-        document.getElementById("menu").style.display = "block";
-
         function showRaceSelection() {
             document.getElementById("menu").style.display = "none";
             document.getElementById("race-select").style.display = "block";
